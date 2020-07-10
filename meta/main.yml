@@ -1,0 +1,14 @@
+galaxy_info:
+  role_name: win_move_user
+  author: Colton Hughes
+  description: Provides the ability to move user AD object to another OU
+
+
+  license: license (GPLv2, CC-BY, etc)
+
+  min_ansible_version: 2.5
+
+  
+  galaxy_tags: []
+  
+dependencies: []
