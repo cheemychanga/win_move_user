@@ -1,31 +1,12 @@
-# Collections Plugins Directory
+# Module Documentation
+This module is quite simple.
+All it does is allow you to provide a name for a user and move them within the Active Directory environment.
 
-This directory can be used to ship various plugins inside an Ansible collection. Each plugin is placed in a folder that
-is named after the type of plugin it is in. It can also include the `module_utils` and `modules` directory that
-would contain module utils and modules respectively.
-
-Here is an example directory of the majority of plugins currently supported by Ansible:
-
+## Example
 ```
-└── plugins
-    ├── action
-    ├── become
-    ├── cache
-    ├── callback
-    ├── cliconf
-    ├── connection
-    ├── filter
-    ├── httpapi
-    ├── inventory
-    ├── lookup
-    ├── module_utils
-    ├── modules
-    ├── netconf
-    ├── shell
-    ├── strategy
-    ├── terminal
-    ├── test
-    └── vars
+- name: Move a user to the Disabled Users OU
+  win_move_user:
+    name: dummy_user@testdomain.com
+    path: OU=Disabled Users,DC=domain,DC=com
 ```
-
-A full list of plugin types can be found at [Working With Plugins](https://docs.ansible.com/ansible/2.9/plugins/plugins.html).
+This is a very simple module that I put very little effort in perfecting.  If issues arise feel free to open them or fork and modify at your own discretion.
