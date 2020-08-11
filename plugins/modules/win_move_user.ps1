@@ -34,6 +34,7 @@ $module.Result.old_path = $before_value
 
 if ($before_value -ne $path)
 {
+    
     ## Move user to given path
     Move-ADObject -Identity (Get-ADUser -Identity $name) -TargetPath $path
     ## Mark as changed
